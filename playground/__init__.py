@@ -2,4 +2,4 @@ __version__ = '0.1.0'
 
 
 def run():
-    print(__version__)
+    print(f"Invoking playground {__version__} from command line")
