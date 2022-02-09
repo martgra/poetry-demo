@@ -5,6 +5,7 @@
 * ```poetry.lock``` produseres av poetry når alle dependencies er resolved. _Bør sjekkes inn i versjonskontroll!_ 
 ## **Grunn 2: Enklere bygging 🛠️**
 * Glem kompliserte setup.py - ```pyproject.toml``` bygger prosjektet for deg!
+* Poetry kan også publisere pakker til private speil eller pypi.org
 ## **Grunn 3: One file to rule them all! 🧙‍♂️**
 * Samle all config, avhengigheter og annet snacks i en fil
 
@@ -21,6 +22,7 @@
     * Spwan shell med ```poetry shell```
 * [Monorepo template](https://github.com/martgra/monorepo) kan kreve litt hack - her er et eksempel
 * Ved rare feil - begynn med å slette ```poetry.lock```
+* Finnes ikke poetry i path? Ikke fortvil - sørg for at ```~/.local/bin``` ligger i ```$PATH```
 
 # **Kom igang på 1-2-3 🚀**
 
