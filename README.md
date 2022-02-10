@@ -26,71 +26,67 @@
 
 # **Kom igang på 1-2-3 🚀**
 
+**Installer poetry**
 ```bash
-# Installer poetry
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
+### **Opprett nytt prosjekt!**  
+
+Opprett prosjekt med filstruktur på gitt path.
 ```bash
-# Oppretter nytt prosjekt! 
 poetry new --name my_library .
 ```
-
+...eller initierer poetry i et eksisterende prosjekt gjennom en interaktiv prompt.
 ```bash
-# Initierer poetry i et eksisterende prosjekt
 poetry init
 ```
+Installer prosjektet - avhengigheter installeres i eksisterende eller nytt venv.
 ```bash
-# Installer prosjektet (poetry tar ansvar og lager venv :)
 poetry install
 ```
+### **Avhengigheter**
+Legg til avhengigheter via CLI eller editere pyproject.toml
 ```bash
-# Kjør kommandoer i venv poetry har laget for oss
-poetry run play
-```
-```bash
-# Aktiverer venv poetry har laget
-poetry shell
-```
-```bash
-# Legg til avhengigheter
 poetry add requests@^2.27
 poetry add git+https://github.com/pallets/flask.git@main
 ```
+Dev avhengigheter kan spesifiseres. Prosjektet kan installeres med/uten dev avhengigheter.
 ```bash
-# Legg til dev avhengigheter
 poetry add --dev black pylint flake8 pydocstyle isort pytest-cov pytest pre-commit
 ```
+Oppdater avhengigheter basert på constraints i ```pyproject.toml```
 ```bash
-# Utforsk avhengigheter
-poetry show -t # Hierarkisk 
-poetry show -o # Utdaterte
+poetry update
 ```
+Utforsk avhengigheter. 
 ```bash
-# Slett env og opprett nytt
+poetry show -t
+```
+Fjern avhengigheter - kan også gjøres direkte i ```pyproject.toml```
+```bash
+poetry remove flask
+```
+Bygg prosjektet - produserer både sdist og wheel.
+```bash
+poetry build
+```
+### **Poetry venv**
+Kjør kommandoer i venv poetry bruker/har opprettet for oss.
+```bash
+poetry run play
+```
+Aktiverer det venv poetry bruker
+```bash
+poetry shell
+```
+Slett env og opprett nytt
+```bash
 exit
 poetry env remove 3.9
 poetry env use 3.9
 ```
-```bash
-# Installer dependencies fra poetry.lock
-poetry install 
-```
-```bash
-# Oppdater avhengigheter
-poetry update # alt
-poetry update requests # spesifikk pakke
-```
-```bash
-# Fjern avhengigheter
-poetry remove flask
-```
-```bash
-# Bygg prosjektet
-poetry build
-```
-
-```bash
-# Deaktiver poetry venv
+Deaktiver poetry venv
+```bash 
 exit
 ```
